@@ -1,0 +1,17 @@
+<h1>Editing task_note</h1>
+
+<%= error_messages_for :task_note %>
+
+<% form_for(@task_note) do |f| %>
+  <p>
+    <b>Note</b><br />
+    <%= f.text_area :note %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @task_note %> |
+<%= link_to 'Back', task_notes_path %>

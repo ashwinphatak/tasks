@@ -1,0 +1,13 @@
+<p>
+  <b>Task:</b>
+  <%=h @task_note.task_id %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @task_note.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_note_path(@task_note) %> |
+<%= link_to 'Back', task_notes_path %>

@@ -1,0 +1,22 @@
+<h1>Listing task_notes</h1>
+
+<table border="1">
+  <tr>
+    <th>Task</th>
+    <th>Note</th>
+  </tr>
+
+<% for task_note in @task_notes %>
+  <tr>
+    <td><%=h task_note.task_id %></td>
+    <td><%=h task_note.note %></td>
+    <td><%= link_to 'Show', task_note %></td>
+    <td><%= link_to 'Edit', edit_task_note_path(task_note) %></td>
+    <td><%= link_to 'Destroy', task_note, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New task_note', new_task_note_path %>

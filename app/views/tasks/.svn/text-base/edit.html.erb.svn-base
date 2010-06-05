@@ -1,0 +1,57 @@
+<h1>Editing task</h1>
+
+<%= error_messages_for :task %>
+
+<% form_for(@task) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Bug</b><br />
+    <%= f.check_box :bug %>
+  </p>
+  
+  <p>
+    <b>Assigned To</b><br />
+    <%= f.text_field :assigned_to %>
+  </p>
+  
+  <p>
+    <b>Req</b><br />
+    <%= f.check_box :req %>
+  </p>
+
+  <p>
+    <b>Dev</b><br />
+    <%= f.check_box :dev %>
+  </p>
+
+  <p>
+    <b>Qa</b><br />
+    <%= f.check_box :qa %>
+  </p>
+
+  <p>
+    <b>Prod Review</b><br />
+    <%= f.check_box :prod_review %>
+  </p>
+
+  <p>
+    <b>Prod</b><br />
+    <%= f.check_box :prod %>
+  </p>
+
+  <p>
+    <b>Hide</b><br />
+    <%= f.check_box :hide %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @task %> |
+<%= link_to 'Back', tasks_path %>

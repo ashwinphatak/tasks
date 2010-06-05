@@ -1,0 +1,34 @@
+<h1>Tasks</h1>
+
+<%= link_to 'New task', new_task_path %>
+<br />
+<br />
+
+<table style="width:100%;">
+  <tr>
+    <th><a href="/tasks?sort=ID">ID</a></th>
+    <th><a href="/tasks">Feature</a></th>
+    <th>Bug</th>
+    <th><a href="/tasks?sort=N">Assigned</a></th>
+    <th><img src="/images/reqr.gif" /></th>
+    <th><img src="/images/dev.gif" /></th>
+    <th><img src="/images/qa.gif" /></th>
+    <th><img src="/images/review.gif" /></th>
+    <th>
+      <img src="/images/prod.gif" />
+    </th>
+    <th><a href="/tasks?sort=CR">Created</a></th>
+    <th><a href="/tasks?sort=UP">Updated</a></th>
+  </tr>
+
+<% for task in @tasks %>
+  <%= render(:partial => "task_row", :locals => {:task => task, :indent => 0}) -%>
+  <%for t in task.children %>
+      <%= render(:partial => "task_row", :locals => {:task => t, :indent => 1}) -%>
+  <%end%>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New task', new_task_path %>

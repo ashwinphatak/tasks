@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/14/tasks/db/migrate
+END
+002_create_task_notes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/14/tasks/db/migrate/002_create_task_notes.rb
+END
+004_add_parent_id.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/14/tasks/db/migrate/004_add_parent_id.rb
+END
+006_add_bug_fields.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/14/tasks/db/migrate/006_add_bug_fields.rb
+END
+005_add_prod_review.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/14/tasks/db/migrate/005_add_prod_review.rb
+END
+001_create_tasks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/14/tasks/db/migrate/001_create_tasks.rb
+END
+003_add_assigned_to.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/14/tasks/db/migrate/003_add_assigned_to.rb
+END

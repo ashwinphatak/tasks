@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  dev: false
+  dev_ts: 2008-12-03 22:43:32
+  qa: false
+  qa_ts: 2008-12-03 22:43:32
+  prod: false
+  prod_ts: 2008-12-03 22:43:32
+  hide: false
+
+two:
+  name: MyString
+  dev: false
+  dev_ts: 2008-12-03 22:43:32
+  qa: false
+  qa_ts: 2008-12-03 22:43:32
+  prod: false
+  prod_ts: 2008-12-03 22:43:32
+  hide: false

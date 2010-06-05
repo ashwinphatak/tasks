@@ -1,0 +1,47 @@
+<% if !task.hide %>
+  <tr class="<%=task.get_state%> <%="subtask" if task.parent_id %> <%="parent_task" if !task.children.blank? %>">
+    <td>
+      <%if indent == 0%>
+        <%=h task.id %>
+      <%else%>
+        <img src="/images/nested.gif" />
+      <%end%>
+    </td>
+    <td>
+    
+    <%if indent == 1%>
+      (<%=h task.id %>)&nbsp;
+    <%end%>
+    <%=h task.name %>
+    
+    </td>
+    <td>
+      <%if task.bug %>
+        <img src="/images/bug.gif" />
+      <%end%>
+    </td>
+    <td><%=h task.assigned_to %></td>
+    <td><img src="/images/<%= task.req %>.gif" /></td>
+    <td><img src="/images/<%= task.dev %>.gif" /></td>
+    <td><img src="/images/<%= task.qa %>.gif" /></td>
+    <td><img src="/images/<%= task.prod_review %>.gif" /></td>
+    <td><img src="/images/<%= task.prod %>.gif" /></td>
+    <td><%= distance_of_time_in_words_to_now(task.created_at) %></td>
+    <td><%= distance_of_time_in_words_to_now(task.updated_at) %></td>
+
+    <td>
+      <a href="<%=edit_task_path(task) %>">
+      <img border="0" src="/images/edit.gif" />
+      </a>
+    </td>
+  
+    <%if indent == 0%>
+    <td>
+      <a href="<%= new_task_path(:parent_id => task.id) %>">
+      <img border="0" src="/images/subtask.gif" />
+      </a>    
+    </td>
+    <%end%>
+    
+  </tr>
+<%end%>

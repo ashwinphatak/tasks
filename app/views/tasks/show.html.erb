@@ -1,0 +1,43 @@
+<p>
+  <b>Name:</b>
+  <%=h @task.name %>
+</p>
+
+<p>
+  <b>Assigned To:</b>
+  <%=h @task.assigned_to %>
+</p>
+
+<p>
+  <b>Req:</b>
+  <%=h @task.req %>
+</p>
+
+<p>
+  <b>Dev:</b>
+  <%=h @task.dev %>
+</p>
+
+<p>
+  <b>Qa:</b>
+  <%=h @task.qa %>
+</p>
+
+<p>
+  <b>Prod Review:</b>
+  <%=h @task.prod_review %>
+</p>
+
+<p>
+  <b>Prod:</b>
+  <%=h @task.prod %>
+</p>
+
+<p>
+  <b>Hide:</b>
+  <%=h @task.hide %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
